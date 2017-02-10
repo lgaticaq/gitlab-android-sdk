@@ -7,7 +7,7 @@ install:
   - docker build -t lgatica/gitlab-android-sdk .
 
 script:
-  - docker run --rm lgatica/gitlab-android-sdk tools/android --help
+  - docker run --rm lgatica/gitlab-android-sdk tools/android list
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
