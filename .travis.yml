@@ -1,0 +1,14 @@
+sudo: required
+
+services:
+  - docker
+
+install:
+  - docker build -t lgatica/gitlab-android-sdk .
+
+script:
+  - docker run --rm lgatica/gitlab-android-sdk tools/android --help
+
+after_success:
+  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push lgatica/gitlab-android-sdk
