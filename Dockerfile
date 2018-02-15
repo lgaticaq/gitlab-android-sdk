@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk@sha256:a609d68b2a3e49e8b7b0fa50d562578d8d0197db2d77d7a2ec6e5be2e7695773
+FROM openjdk:8-jdk@sha256:52b96fdf28d56c570228f63be4701778378145905e7b0836eaeea1ba17c85129
 
 LABEL maintainer "Leonardo Gatica <lgatica@protonmail.com>"
 
